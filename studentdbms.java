@@ -33,7 +33,7 @@ public class studentdbms {
                 case 3 -> searchStudent();
                 case 4 -> displayAll();
                 case 5 -> {
-                    System.out.println("👋 Exiting...");
+                    System.out.println(" Exiting...");
                     return;
                 }
                 default -> System.out.println("Invalid option!");
