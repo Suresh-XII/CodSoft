@@ -21,10 +21,10 @@ class BankAccount {
         }
     }
     public void checkBalance() {
-        System.out.println("💰 Current Balance: " + balance);
+        System.out.println(" Current Balance: " + balance);
     }
 }
-public class ATM {
+public class atm {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         BankAccount account = new BankAccount(1000);
@@ -49,7 +49,7 @@ public class ATM {
                     account.withdraw(wit);
                 }
                 case 4 -> {
-                    System.out.println("👋 Thank you for using the ATM!");
+                    System.out.println(" Thank you for using the ATM!");
                     sc.close();
                     return;
                 }

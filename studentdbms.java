@@ -36,7 +36,7 @@ public class studentdbms {
                     System.out.println("👋 Exiting...");
                     return;
                 }
-                default -> System.out.println("❌ Invalid option!");
+                default -> System.out.println("Invalid option!");
             }
         }
     }
