@@ -1,23 +1,27 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
+
 class Student {
     String name;
     int rollNo;
     String grade;
+
     Student(String name, int rollNo, String grade) {
         this.name = name;
         this.rollNo = rollNo;
         this.grade = grade;
     }
+
     @Override
     public String toString() {
         return "Roll No: " + rollNo + ", Name: " + name + ", Grade: " + grade;
     }
 }
-public class StudentDBMS {
+
+public class studentdbms {
     private static final ArrayList<Student> students = new ArrayList<>();
     private static final Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         while (true) {
             System.out.println("\n=== Student Management System ===");
@@ -41,6 +45,7 @@ public class StudentDBMS {
             }
         }
     }
+
     private static void addStudent() {
         System.out.print("Enter Roll No: ");
         int roll = sc.nextInt();
@@ -52,12 +57,14 @@ public class StudentDBMS {
         students.add(new Student(name, roll, grade));
         System.out.println("Student added!");
     }
+
     private static void removeStudent() {
         System.out.print("Enter Roll No to remove: ");
         int roll = sc.nextInt();
         students.removeIf(s -> s.rollNo == roll);
         System.out.println("Student removed (if existed).");
     }
+
     private static void searchStudent() {
         System.out.print("Enter Roll No to search: ");
         int roll = sc.nextInt();
@@ -69,13 +76,9 @@ public class StudentDBMS {
         }
         System.out.println("Student not found.");
     }
+
     private static void displayAll() {
-        if (students.isEmpty()) {
-            System.out.println("No students in the system.");
-        } else {
-            for (Student s : students) {
-                System.out.println(s);
-            }
-        }
+        if (students.isEmpty()) System.out.println("No students in the system.");
+        else students.forEach(System.out::println);
     }
 }
