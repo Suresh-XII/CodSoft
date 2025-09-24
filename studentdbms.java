@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Scanner;
 class Student {
@@ -14,7 +15,7 @@ class Student {
         return "Roll No: " + rollNo + ", Name: " + name + ", Grade: " + grade;
     }
 }
-public class studentdbms {
+public class StudentDBMS {
     private static final ArrayList<Student> students = new ArrayList<>();
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
@@ -33,7 +34,7 @@ public class studentdbms {
                 case 3 -> searchStudent();
                 case 4 -> displayAll();
                 case 5 -> {
-                    System.out.println(" Exiting...");
+                    System.out.println("Exiting...");
                     return;
                 }
                 default -> System.out.println("Invalid option!");
@@ -43,13 +44,13 @@ public class studentdbms {
     private static void addStudent() {
         System.out.print("Enter Roll No: ");
         int roll = sc.nextInt();
-        sc.nextLine(); 
+        sc.nextLine();
         System.out.print("Enter Name: ");
         String name = sc.nextLine();
         System.out.print("Enter Grade: ");
         String grade = sc.nextLine();
         students.add(new Student(name, roll, grade));
-        System.out.println(" Student added!");
+        System.out.println("Student added!");
     }
     private static void removeStudent() {
         System.out.print("Enter Roll No to remove: ");
